@@ -1,0 +1,20 @@
+<h1>Cat Names</h1>
+<% @cats.each do |cat|%>
+	<p><%= "#{cat.name}" %></p>
+<% end %>
+
+<h2>Cat Owners</h2>
+<% @users.each do |u|%>
+	<p><%= "#{u.username}, age #{u.age}, loves cats!" %></p>
+	<p>Here's their email: <%= u.email%></p>
+<% end %>
+
+<h3>Tasks</h3>
+<% @toDos.each do |t|%>
+	<p><%= "#{t.tasks} has " %>
+		<% if t.finished%>
+			<%="been completed"%>
+		<% else %>
+			<%="not been completed"%>
+			<%end%></p>
+<% end %>
